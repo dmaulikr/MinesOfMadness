@@ -1,0 +1,590 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		69046B591CDC04930036D2CD /* LevelCompleteScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69046B581CDC04930036D2CD /* LevelCompleteScene.swift */; };
+		69046B5B1CDC04CC0036D2CD /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69046B5A1CDC04CC0036D2CD /* Enemy.swift */; };
+		69191BB81CD90A450032343E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69191BB71CD90A450032343E /* AppDelegate.swift */; };
+		69191BBC1CD90A450032343E /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69191BBB1CD90A450032343E /* GameScene.swift */; };
+		69191BBE1CD90A450032343E /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69191BBD1CD90A450032343E /* GameViewController.swift */; };
+		69191BC11CD90A450032343E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69191BBF1CD90A450032343E /* Main.storyboard */; };
+		69191BC31CD90A460032343E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69191BC21CD90A460032343E /* Assets.xcassets */; };
+		69191BC61CD90A460032343E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69191BC41CD90A460032343E /* LaunchScreen.storyboard */; };
+		69191BCF1CD90E4C0032343E /* JDUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69191BCE1CD90E4C0032343E /* JDUtils.swift */; };
+		69191BD11CD90EB20032343E /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69191BD01CD90EB20032343E /* Player.swift */; };
+		69191BD41CD90FDB0032343E /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69191BD31CD90FDB0032343E /* MainMenu.swift */; };
+		69191BD61CD90FF00032343E /* JDScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69191BD51CD90FF00032343E /* JDScene.swift */; };
+		69191BD81CD9112D0032343E /* LevelMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69191BD71CD9112D0032343E /* LevelMaker.swift */; };
+		6923E4A11CEA34B200F8A2D9 /* Thru_The_Fog.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6923E4A01CEA34B200F8A2D9 /* Thru_The_Fog.mp3 */; };
+		6923E4A21CEA34B200F8A2D9 /* Thru_The_Fog.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6923E4A01CEA34B200F8A2D9 /* Thru_The_Fog.mp3 */; };
+		6923E4A41CEA356B00F8A2D9 /* menu-select.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6923E4A31CEA356B00F8A2D9 /* menu-select.wav */; };
+		694438D11CDA4C5B004EBBBA /* bloodcrow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 694438D01CDA4C5B004EBBBA /* bloodcrow.ttf */; };
+		694438D41CDA4E40004EBBBA /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694438D31CDA4E40004EBBBA /* CGPoint+Extensions.swift */; };
+		694438D61CDA50D4004EBBBA /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694438D51CDA50D4004EBBBA /* CGFloat+Extensions.swift */; };
+		6946888F1CE637A0007E65AE /* JDArrowButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6946888E1CE637A0007E65AE /* JDArrowButtonNode.swift */; };
+		697930D51CEA4A9900423B8D /* LaunchImage-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 697930D41CEA4A9900423B8D /* LaunchImage-568h@2x.png */; };
+		697FC9A51CDEA32500142E1C /* iOS-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697FC9A41CDEA32500142E1C /* iOS-Extensions.swift */; };
+		697FC9A61CDEA37900142E1C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69191BC21CD90A460032343E /* Assets.xcassets */; };
+		697FC9A81CDEA3FE00142E1C /* tvOS-Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697FC9A71CDEA3FE00142E1C /* tvOS-Extensions.swift */; };
+		697FC9AB1CDEB2F400142E1C /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69191BBB1CD90A450032343E /* GameScene.swift */; };
+		697FC9AD1CDEB6DA00142E1C /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697FC9AC1CDEB6DA00142E1C /* Int+Extensions.swift */; };
+		697FC9AE1CDEB73800142E1C /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697FC9AC1CDEB6DA00142E1C /* Int+Extensions.swift */; };
+		697FC9B01CDEC9EF00142E1C /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697FC9AF1CDEC9EF00142E1C /* GameOverScene.swift */; };
+		697FC9B11CDEC9EF00142E1C /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697FC9AF1CDEC9EF00142E1C /* GameOverScene.swift */; };
+		697FC9B31CDECF7900142E1C /* JDButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697FC9B21CDECF7900142E1C /* JDButtonNode.swift */; };
+		697FC9B41CDECF7900142E1C /* JDButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697FC9B21CDECF7900142E1C /* JDButtonNode.swift */; };
+		697FC9B61CDED10300142E1C /* CGSize+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697FC9B51CDED10300142E1C /* CGSize+Extensions.swift */; };
+		697FC9B71CDED10300142E1C /* CGSize+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697FC9B51CDED10300142E1C /* CGSize+Extensions.swift */; };
+		699112D41CDFAEB400A5F93D /* HowToPlayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699112D31CDFAEB400A5F93D /* HowToPlayScene.swift */; };
+		69B1AAF61CDE9FA000581F09 /* Game.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69B1AAF51CDE9FA000581F09 /* Game.xcassets */; };
+		69B1AAF91CDE9FA000581F09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69B1AAF71CDE9FA000581F09 /* Main.storyboard */; };
+		69B1AAFB1CDE9FA000581F09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69B1AAFA1CDE9FA000581F09 /* Assets.xcassets */; };
+		69B1AB021CDEA00500581F09 /* JDScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69191BD51CD90FF00032343E /* JDScene.swift */; };
+		69B1AB031CDEA00500581F09 /* LevelCompleteScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69046B581CDC04930036D2CD /* LevelCompleteScene.swift */; };
+		69B1AB041CDEA01400581F09 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69191BD01CD90EB20032343E /* Player.swift */; };
+		69B1AB051CDEA01400581F09 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69046B5A1CDC04CC0036D2CD /* Enemy.swift */; };
+		69B1AB061CDEA01900581F09 /* LevelMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69191BD71CD9112D0032343E /* LevelMaker.swift */; };
+		69B1AB071CDEA01900581F09 /* JDUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69191BCE1CD90E4C0032343E /* JDUtils.swift */; };
+		69B1AB081CDEA01900581F09 /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694438D31CDA4E40004EBBBA /* CGPoint+Extensions.swift */; };
+		69B1AB091CDEA01900581F09 /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694438D51CDA50D4004EBBBA /* CGFloat+Extensions.swift */; };
+		69B1AB0A1CDEA01C00581F09 /* bloodcrow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 694438D01CDA4C5B004EBBBA /* bloodcrow.ttf */; };
+		69B1AB0B1CDEA02600581F09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69191BB71CD90A450032343E /* AppDelegate.swift */; };
+		69B1AB0C1CDEA03700581F09 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69191BBD1CD90A450032343E /* GameViewController.swift */; };
+		69D30B961CDFC6FA00406D8D /* HowToPlayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D30B951CDFC6FA00406D8D /* HowToPlayScene.swift */; };
+		69D30B971CDFC90C00406D8D /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69191BD31CD90FDB0032343E /* MainMenu.swift */; };
+		69FBEAB91CE8C924003358C7 /* footsteps.wav in Resources */ = {isa = PBXBuildFile; fileRef = 69FBEAB71CE8C924003358C7 /* footsteps.wav */; };
+		69FBEABA1CE8C924003358C7 /* footsteps.wav in Resources */ = {isa = PBXBuildFile; fileRef = 69FBEAB71CE8C924003358C7 /* footsteps.wav */; };
+		69FBEABB1CE8C924003358C7 /* zombie.wav in Resources */ = {isa = PBXBuildFile; fileRef = 69FBEAB81CE8C924003358C7 /* zombie.wav */; };
+		69FBEABC1CE8C924003358C7 /* zombie.wav in Resources */ = {isa = PBXBuildFile; fileRef = 69FBEAB81CE8C924003358C7 /* zombie.wav */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		69046B581CDC04930036D2CD /* LevelCompleteScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelCompleteScene.swift; sourceTree = "<group>"; };
+		69046B5A1CDC04CC0036D2CD /* Enemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
+		69191BB41CD90A450032343E /* Mines of Madness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mines of Madness.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		69191BB71CD90A450032343E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		69191BBB1CD90A450032343E /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		69191BBD1CD90A450032343E /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		69191BC01CD90A450032343E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		69191BC21CD90A460032343E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		69191BC51CD90A460032343E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		69191BC71CD90A460032343E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69191BCE1CD90E4C0032343E /* JDUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JDUtils.swift; sourceTree = "<group>"; };
+		69191BD01CD90EB20032343E /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		69191BD31CD90FDB0032343E /* MainMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
+		69191BD51CD90FF00032343E /* JDScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JDScene.swift; sourceTree = "<group>"; };
+		69191BD71CD9112D0032343E /* LevelMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelMaker.swift; sourceTree = "<group>"; };
+		6923E4A01CEA34B200F8A2D9 /* Thru_The_Fog.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Thru_The_Fog.mp3; sourceTree = "<group>"; };
+		6923E4A31CEA356B00F8A2D9 /* menu-select.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "menu-select.wav"; sourceTree = "<group>"; };
+		694438D01CDA4C5B004EBBBA /* bloodcrow.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bloodcrow.ttf; sourceTree = "<group>"; };
+		694438D31CDA4E40004EBBBA /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extensions.swift"; sourceTree = "<group>"; };
+		694438D51CDA50D4004EBBBA /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
+		6946888E1CE637A0007E65AE /* JDArrowButtonNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JDArrowButtonNode.swift; sourceTree = "<group>"; };
+		697930D41CEA4A9900423B8D /* LaunchImage-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LaunchImage-568h@2x.png"; sourceTree = "<group>"; };
+		697FC9A41CDEA32500142E1C /* iOS-Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "iOS-Extensions.swift"; sourceTree = "<group>"; };
+		697FC9A71CDEA3FE00142E1C /* tvOS-Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "tvOS-Extensions.swift"; sourceTree = "<group>"; };
+		697FC9AC1CDEB6DA00142E1C /* Int+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
+		697FC9AF1CDEC9EF00142E1C /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
+		697FC9B21CDECF7900142E1C /* JDButtonNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JDButtonNode.swift; sourceTree = "<group>"; };
+		697FC9B51CDED10300142E1C /* CGSize+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGSize+Extensions.swift"; sourceTree = "<group>"; };
+		699112D31CDFAEB400A5F93D /* HowToPlayScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowToPlayScene.swift; sourceTree = "<group>"; };
+		69B1AAEB1CDE9F9F00581F09 /* Mines of Madness TV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mines of Madness TV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		69B1AAF51CDE9FA000581F09 /* Game.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Game.xcassets; sourceTree = "<group>"; };
+		69B1AAF81CDE9FA000581F09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		69B1AAFA1CDE9FA000581F09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		69B1AAFC1CDE9FA000581F09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69D30B951CDFC6FA00406D8D /* HowToPlayScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowToPlayScene.swift; sourceTree = "<group>"; };
+		69FBEAB71CE8C924003358C7 /* footsteps.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = footsteps.wav; sourceTree = "<group>"; };
+		69FBEAB81CE8C924003358C7 /* zombie.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = zombie.wav; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		69191BB11CD90A450032343E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69B1AAE81CDE9F9F00581F09 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		69046B5C1CDC04D30036D2CD /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				69191BD01CD90EB20032343E /* Player.swift */,
+				69046B5A1CDC04CC0036D2CD /* Enemy.swift */,
+				697FC9B21CDECF7900142E1C /* JDButtonNode.swift */,
+				6946888E1CE637A0007E65AE /* JDArrowButtonNode.swift */,
+			);
+			name = Nodes;
+			sourceTree = "<group>";
+		};
+		69191BAB1CD90A450032343E = {
+			isa = PBXGroup;
+			children = (
+				697930D41CEA4A9900423B8D /* LaunchImage-568h@2x.png */,
+				69FBEAB61CE8C913003358C7 /* Sounds */,
+				69191BB61CD90A450032343E /* Mines of Madness */,
+				69B1AAEC1CDE9FA000581F09 /* Mines of Madness TV */,
+				69191BB51CD90A450032343E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		69191BB51CD90A450032343E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				69191BB41CD90A450032343E /* Mines of Madness.app */,
+				69B1AAEB1CDE9F9F00581F09 /* Mines of Madness TV.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		69191BB61CD90A450032343E /* Mines of Madness */ = {
+			isa = PBXGroup;
+			children = (
+				694438D21CDA4E2D004EBBBA /* Helpers */,
+				69191BD21CD90FC80032343E /* Scenes */,
+				69046B5C1CDC04D30036D2CD /* Nodes */,
+				694438D01CDA4C5B004EBBBA /* bloodcrow.ttf */,
+				69191BB71CD90A450032343E /* AppDelegate.swift */,
+				69191BBD1CD90A450032343E /* GameViewController.swift */,
+				69191BBF1CD90A450032343E /* Main.storyboard */,
+				69191BC21CD90A460032343E /* Assets.xcassets */,
+				69191BC41CD90A460032343E /* LaunchScreen.storyboard */,
+				69191BC71CD90A460032343E /* Info.plist */,
+				699112D31CDFAEB400A5F93D /* HowToPlayScene.swift */,
+			);
+			path = "Mines of Madness";
+			sourceTree = "<group>";
+		};
+		69191BD21CD90FC80032343E /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				69191BBB1CD90A450032343E /* GameScene.swift */,
+				69191BD31CD90FDB0032343E /* MainMenu.swift */,
+				69191BD51CD90FF00032343E /* JDScene.swift */,
+				69046B581CDC04930036D2CD /* LevelCompleteScene.swift */,
+				697FC9AF1CDEC9EF00142E1C /* GameOverScene.swift */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		694438D21CDA4E2D004EBBBA /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				69191BD71CD9112D0032343E /* LevelMaker.swift */,
+				69191BCE1CD90E4C0032343E /* JDUtils.swift */,
+				694438D31CDA4E40004EBBBA /* CGPoint+Extensions.swift */,
+				694438D51CDA50D4004EBBBA /* CGFloat+Extensions.swift */,
+				697FC9A41CDEA32500142E1C /* iOS-Extensions.swift */,
+				697FC9A71CDEA3FE00142E1C /* tvOS-Extensions.swift */,
+				697FC9AC1CDEB6DA00142E1C /* Int+Extensions.swift */,
+				697FC9B51CDED10300142E1C /* CGSize+Extensions.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		69B1AAEC1CDE9FA000581F09 /* Mines of Madness TV */ = {
+			isa = PBXGroup;
+			children = (
+				69B1AAF51CDE9FA000581F09 /* Game.xcassets */,
+				69B1AAF71CDE9FA000581F09 /* Main.storyboard */,
+				69B1AAFA1CDE9FA000581F09 /* Assets.xcassets */,
+				69B1AAFC1CDE9FA000581F09 /* Info.plist */,
+				69D30B951CDFC6FA00406D8D /* HowToPlayScene.swift */,
+			);
+			path = "Mines of Madness TV";
+			sourceTree = "<group>";
+		};
+		69FBEAB61CE8C913003358C7 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				6923E4A31CEA356B00F8A2D9 /* menu-select.wav */,
+				6923E4A01CEA34B200F8A2D9 /* Thru_The_Fog.mp3 */,
+				69FBEAB71CE8C924003358C7 /* footsteps.wav */,
+				69FBEAB81CE8C924003358C7 /* zombie.wav */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		69191BB31CD90A450032343E /* Mines of Madness */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69191BCA1CD90A460032343E /* Build configuration list for PBXNativeTarget "Mines of Madness" */;
+			buildPhases = (
+				69191BB01CD90A450032343E /* Sources */,
+				69191BB11CD90A450032343E /* Frameworks */,
+				69191BB21CD90A450032343E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Mines of Madness";
+			productName = "Mines of Madness";
+			productReference = 69191BB41CD90A450032343E /* Mines of Madness.app */;
+			productType = "com.apple.product-type.application";
+		};
+		69B1AAEA1CDE9F9F00581F09 /* Mines of Madness TV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69B1AAFF1CDE9FA000581F09 /* Build configuration list for PBXNativeTarget "Mines of Madness TV" */;
+			buildPhases = (
+				69B1AAE71CDE9F9F00581F09 /* Sources */,
+				69B1AAE81CDE9F9F00581F09 /* Frameworks */,
+				69B1AAE91CDE9F9F00581F09 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Mines of Madness TV";
+			productName = "Mines of Madness TV";
+			productReference = 69B1AAEB1CDE9F9F00581F09 /* Mines of Madness TV.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		69191BAC1CD90A450032343E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Jeffery Kelly";
+				TargetAttributes = {
+					69191BB31CD90A450032343E = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					69B1AAEA1CDE9F9F00581F09 = {
+						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = U2ZFA8C8KS;
+					};
+				};
+			};
+			buildConfigurationList = 69191BAF1CD90A450032343E /* Build configuration list for PBXProject "Mines of Madness" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 69191BAB1CD90A450032343E;
+			productRefGroup = 69191BB51CD90A450032343E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				69191BB31CD90A450032343E /* Mines of Madness */,
+				69B1AAEA1CDE9F9F00581F09 /* Mines of Madness TV */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		69191BB21CD90A450032343E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				694438D11CDA4C5B004EBBBA /* bloodcrow.ttf in Resources */,
+				6923E4A11CEA34B200F8A2D9 /* Thru_The_Fog.mp3 in Resources */,
+				697930D51CEA4A9900423B8D /* LaunchImage-568h@2x.png in Resources */,
+				69FBEAB91CE8C924003358C7 /* footsteps.wav in Resources */,
+				69191BC61CD90A460032343E /* LaunchScreen.storyboard in Resources */,
+				69191BC31CD90A460032343E /* Assets.xcassets in Resources */,
+				69FBEABB1CE8C924003358C7 /* zombie.wav in Resources */,
+				69191BC11CD90A450032343E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69B1AAE91CDE9F9F00581F09 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69B1AAF91CDE9FA000581F09 /* Main.storyboard in Resources */,
+				69B1AB0A1CDEA01C00581F09 /* bloodcrow.ttf in Resources */,
+				69B1AAFB1CDE9FA000581F09 /* Assets.xcassets in Resources */,
+				69FBEABC1CE8C924003358C7 /* zombie.wav in Resources */,
+				6923E4A21CEA34B200F8A2D9 /* Thru_The_Fog.mp3 in Resources */,
+				69B1AAF61CDE9FA000581F09 /* Game.xcassets in Resources */,
+				69FBEABA1CE8C924003358C7 /* footsteps.wav in Resources */,
+				6923E4A41CEA356B00F8A2D9 /* menu-select.wav in Resources */,
+				697FC9A61CDEA37900142E1C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		69191BB01CD90A450032343E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69191BD61CD90FF00032343E /* JDScene.swift in Sources */,
+				69191BBC1CD90A450032343E /* GameScene.swift in Sources */,
+				69191BD41CD90FDB0032343E /* MainMenu.swift in Sources */,
+				697FC9A51CDEA32500142E1C /* iOS-Extensions.swift in Sources */,
+				69046B591CDC04930036D2CD /* LevelCompleteScene.swift in Sources */,
+				6946888F1CE637A0007E65AE /* JDArrowButtonNode.swift in Sources */,
+				69191BD81CD9112D0032343E /* LevelMaker.swift in Sources */,
+				694438D41CDA4E40004EBBBA /* CGPoint+Extensions.swift in Sources */,
+				69191BBE1CD90A450032343E /* GameViewController.swift in Sources */,
+				694438D61CDA50D4004EBBBA /* CGFloat+Extensions.swift in Sources */,
+				69046B5B1CDC04CC0036D2CD /* Enemy.swift in Sources */,
+				699112D41CDFAEB400A5F93D /* HowToPlayScene.swift in Sources */,
+				697FC9B61CDED10300142E1C /* CGSize+Extensions.swift in Sources */,
+				697FC9B01CDEC9EF00142E1C /* GameOverScene.swift in Sources */,
+				69191BB81CD90A450032343E /* AppDelegate.swift in Sources */,
+				697FC9AD1CDEB6DA00142E1C /* Int+Extensions.swift in Sources */,
+				697FC9B31CDECF7900142E1C /* JDButtonNode.swift in Sources */,
+				69191BD11CD90EB20032343E /* Player.swift in Sources */,
+				69191BCF1CD90E4C0032343E /* JDUtils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69B1AAE71CDE9F9F00581F09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69B1AB091CDEA01900581F09 /* CGFloat+Extensions.swift in Sources */,
+				69D30B971CDFC90C00406D8D /* MainMenu.swift in Sources */,
+				69B1AB071CDEA01900581F09 /* JDUtils.swift in Sources */,
+				69B1AB0B1CDEA02600581F09 /* AppDelegate.swift in Sources */,
+				69B1AB031CDEA00500581F09 /* LevelCompleteScene.swift in Sources */,
+				69B1AB041CDEA01400581F09 /* Player.swift in Sources */,
+				69B1AB051CDEA01400581F09 /* Enemy.swift in Sources */,
+				697FC9A81CDEA3FE00142E1C /* tvOS-Extensions.swift in Sources */,
+				69B1AB0C1CDEA03700581F09 /* GameViewController.swift in Sources */,
+				69B1AB021CDEA00500581F09 /* JDScene.swift in Sources */,
+				697FC9B71CDED10300142E1C /* CGSize+Extensions.swift in Sources */,
+				69D30B961CDFC6FA00406D8D /* HowToPlayScene.swift in Sources */,
+				697FC9B11CDEC9EF00142E1C /* GameOverScene.swift in Sources */,
+				69B1AB081CDEA01900581F09 /* CGPoint+Extensions.swift in Sources */,
+				697FC9AE1CDEB73800142E1C /* Int+Extensions.swift in Sources */,
+				697FC9B41CDECF7900142E1C /* JDButtonNode.swift in Sources */,
+				697FC9AB1CDEB2F400142E1C /* GameScene.swift in Sources */,
+				69B1AB061CDEA01900581F09 /* LevelMaker.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		69191BBF1CD90A450032343E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				69191BC01CD90A450032343E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		69191BC41CD90A460032343E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				69191BC51CD90A460032343E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		69B1AAF71CDE9FA000581F09 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				69B1AAF81CDE9FA000581F09 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		69191BC81CD90A460032343E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		69191BC91CD90A460032343E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		69191BCB1CD90A460032343E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Mines of Madness/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mobile-Project-Team.Mines-of-Madness";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		69191BCC1CD90A460032343E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Mines of Madness/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mobile-Project-Team.Mines-of-Madness";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		69B1AAFD1CDE9FA000581F09 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Mines of Madness TV/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mobile-Project-Team.Mines-of-Madness-TV";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Debug;
+		};
+		69B1AAFE1CDE9FA000581F09 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Mines of Madness TV/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Mobile-Project-Team.Mines-of-Madness-TV";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		69191BAF1CD90A450032343E /* Build configuration list for PBXProject "Mines of Madness" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69191BC81CD90A460032343E /* Debug */,
+				69191BC91CD90A460032343E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69191BCA1CD90A460032343E /* Build configuration list for PBXNativeTarget "Mines of Madness" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69191BCB1CD90A460032343E /* Debug */,
+				69191BCC1CD90A460032343E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69B1AAFF1CDE9FA000581F09 /* Build configuration list for PBXNativeTarget "Mines of Madness TV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69B1AAFD1CDE9FA000581F09 /* Debug */,
+				69B1AAFE1CDE9FA000581F09 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 69191BAC1CD90A450032343E /* Project object */;
+}
