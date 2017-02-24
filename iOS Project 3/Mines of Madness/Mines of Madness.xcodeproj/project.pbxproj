@@ -269,6 +269,8 @@
 				TargetAttributes = {
 					69191BB31CD90A450032343E = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = U2ZFA8C8KS;
+						LastSwiftMigration = 0820;
 					};
 					69B1AAEA1CDE9F9F00581F09 = {
 						CreatedOnToolsVersion = 7.3;
@@ -500,10 +502,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = U2ZFA8C8KS;
 				INFOPLIST_FILE = "Mines of Madness/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Mobile-Project-Team.Mines-of-Madness";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -511,10 +515,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = U2ZFA8C8KS;
 				INFOPLIST_FILE = "Mines of Madness/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Mobile-Project-Team.Mines-of-Madness";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

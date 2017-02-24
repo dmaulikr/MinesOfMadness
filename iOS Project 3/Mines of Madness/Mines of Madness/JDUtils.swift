@@ -13,7 +13,7 @@ struct ProjectConstants {
     static let UILabelSize:CGFloat = 30;
     static let ButtonPaddingX:CGFloat = 10;
     static let ButtonPaddingY:CGFloat = 10;
-    static let TileSize:CGSize = CGSizeMake(32, 32);
+    static let TileSize:CGSize = CGSize(width: 32, height: 32);
     static var TileWidth:CGFloat {
         get {
             return TileSize.width;

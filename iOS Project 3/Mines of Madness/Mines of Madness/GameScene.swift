@@ -10,7 +10,7 @@ import SpriteKit;
 import GameplayKit;
 
 protocol JDGameScene {
-    func movePlayer(pos:CGPoint);
+    func movePlayer(_ pos:CGPoint);
 }
 class GameScene: JDScene, tileMapDelegate, SKPhysicsContactDelegate, JDGameScene {
     var player:Player!;
@@ -36,8 +36,8 @@ class GameScene: JDScene, tileMapDelegate, SKPhysicsContactDelegate, JDGameScene
     let atkLabel = JDButtonNode();
     #endif
     //MARK: didMoveToView
-    override func didMoveToView(view: SKView) {
-        backgroundColor = SKColor.blackColor();
+    override func didMove(to view: SKView) {
+        backgroundColor = SKColor.black;
         let myCamera = SKCameraNode();
         camera = myCamera;
         myCamera.setScale(0.44);
@@ -66,34 +66,34 @@ class GameScene: JDScene, tileMapDelegate, SKPhysicsContactDelegate, JDGameScene
         
         //Generate UI
         lanternTimeLabel.position = CGPoint(x: 0, y: size.height * 3 / 8);
-        lanternTimeLabel.horizontalAlignmentMode = .Center;
+        lanternTimeLabel.horizontalAlignmentMode = .center;
         lanternTimeLabel.zPosition = 10;
-        lanternTimeLabel.fontColor = SKColor.whiteColor();
+        lanternTimeLabel.fontColor = SKColor.white;
         lanternTimeLabel.fontSize = ProjectConstants.UILabelSize;
         lanternTimeLabel.text = "Lantern: \(player.torchEnergy)";
         overlayLayer.addChild(lanternTimeLabel);
         
         hpLabel.position = CGPoint(x: -size.width / 4, y: size.height * 3 / 8);
-        hpLabel.horizontalAlignmentMode = .Center;
+        hpLabel.horizontalAlignmentMode = .center;
         hpLabel.zPosition = 10;
-        hpLabel.fontColor = SKColor.whiteColor();
+        hpLabel.fontColor = SKColor.white;
         hpLabel.fontSize = ProjectConstants.UILabelSize;
         hpLabel.text = "HP: \(player.hp)";
         overlayLayer.addChild(hpLabel);
         
         sanityLabel.position = CGPoint(x: size.width / 4, y: size.height * 3 / 8);
-        sanityLabel.horizontalAlignmentMode = .Center;
+        sanityLabel.horizontalAlignmentMode = .center;
         sanityLabel.zPosition = 10;
-        sanityLabel.fontColor = SKColor.whiteColor();
+        sanityLabel.fontColor = SKColor.white;
         sanityLabel.fontSize = ProjectConstants.UILabelSize;
         sanityLabel.text = "SAN: \(player.sanity)";
         overlayLayer.addChild(sanityLabel);
         
         #if os(iOS)
             atkLabel.text = "ATTACK";
-            atkLabel.horizontalAlignmentMode = .Center;
-            atkLabel.verticalAlignmentMode = .Center;
-            atkLabel.fontColor = SKColor.whiteColor();
+            atkLabel.horizontalAlignmentMode = .center;
+            atkLabel.verticalAlignmentMode = .center;
+            atkLabel.fontColor = SKColor.white;
             atkLabel.fontSize = ProjectConstants.UILabelSize;
             atkLabel.zPosition = 10;
             atkLabel.position = CGPoint(x:size.width / 4, y: -size.height * 3 / 16);
@@ -122,7 +122,7 @@ class GameScene: JDScene, tileMapDelegate, SKPhysicsContactDelegate, JDGameScene
         #endif
     }
     
-    func didBeginContact(contact: SKPhysicsContact) {
+    func didBegin(_ contact: SKPhysicsContact) {
         let bodyA = contact.bodyA;
         let bodyB = contact.bodyB;
         let collision = bodyA.categoryBitMask | bodyB.categoryBitMask;
@@ -154,18 +154,18 @@ class GameScene: JDScene, tileMapDelegate, SKPhysicsContactDelegate, JDGameScene
         }
     }
     
-    func centerCameraOnPoint(location:CGPoint) {
+    func centerCameraOnPoint(_ location:CGPoint) {
         if let camera = camera {
             camera.position = location;
         }
     }
    
-    func movePlayer(pos:CGPoint) {
+    func movePlayer(_ pos:CGPoint) {
         let oldPos = player.position;
         let testPos = player.position + pos;
         if (!worldGen.isObstructed(testPos)) {
             player.position = testPos;
-            runAction(SKAction.playSoundFileNamed("footsteps.wav", waitForCompletion: false));
+            run(SKAction.playSoundFileNamed("footsteps.wav", waitForCompletion: false));
             player.torchEnergy -= 1;
             centerCameraOnPoint(player.position);
             
@@ -174,7 +174,7 @@ class GameScene: JDScene, tileMapDelegate, SKPhysicsContactDelegate, JDGameScene
                 enemy.move(worldGen);
                 
                 if (enemy.position == testPos) {
-                    runAction(SKAction.playSoundFileNamed("zombie.wav", waitForCompletion: false));
+                    run(SKAction.playSoundFileNamed("zombie.wav", waitForCompletion: false));
                     player.hp -= 5;
                     player.position = oldPos;
                 }
@@ -187,13 +187,13 @@ class GameScene: JDScene, tileMapDelegate, SKPhysicsContactDelegate, JDGameScene
     }
     
     func attack() {
-        enumerateChildNodesWithName("obstacle") {
+        enumerateChildNodes(withName: "obstacle") {
             node, _ in
       
             if (Int(node.position.distance(self.playerLocation)) <= 32) {
                 self.worldGen.setTile(position: self.worldGen.worldToGrid(node.position), toValue: tileTypes.grass.rawValue);
                 let grass = SKSpriteNode(imageNamed: "tile_grass");
-                grass.size = CGSizeMake(32, 32);
+                grass.size = CGSize(width: 32, height: 32);
                 grass.position = node.position;
                 grass.zPosition = 1;
                 grass.lightingBitMask = PhysicsCategories.Grass;
@@ -215,12 +215,12 @@ class GameScene: JDScene, tileMapDelegate, SKPhysicsContactDelegate, JDGameScene
     }
     
     //MARK: Level Maker Delegate Functions
-    func createNodeOf(type type: tileTypes, location: CGPoint) {
+    func createNodeOf(type: tileTypes, location: CGPoint) {
         let randomizer = GKRandomDistribution(forDieWithSideCount: 4);
         switch type {
         case .grass:
             let node = SKSpriteNode(imageNamed: "tile_grass");
-            node.size = CGSizeMake(32, 32);
+            node.size = CGSize(width: 32, height: 32);
             node.position = location;
             node.zPosition = 1;
             node.lightingBitMask = PhysicsCategories.Grass;
@@ -228,11 +228,11 @@ class GameScene: JDScene, tileMapDelegate, SKPhysicsContactDelegate, JDGameScene
             break;
         case .wall:
             let node = SKSpriteNode(imageNamed: "tile_wall");
-            node.size = CGSizeMake(32, 32);
+            node.size = CGSize(width: 32, height: 32);
             node.position = location;
             node.zPosition = 1;
             node.lightingBitMask = PhysicsCategories.Wall;
-            node.physicsBody = SKPhysicsBody(edgeLoopFromRect: CGRect(origin: CGPointMake(-16, -16), size: CGSizeMake(32, 32)));
+            node.physicsBody = SKPhysicsBody(edgeLoopFrom: CGRect(origin: CGPoint(x: -16, y: -16), size: CGSize(width: 32, height: 32)));
             node.physicsBody?.categoryBitMask = PhysicsCategories.Wall;
 
             addChild(node);
@@ -240,7 +240,7 @@ class GameScene: JDScene, tileMapDelegate, SKPhysicsContactDelegate, JDGameScene
         case .table:
             let node = SKSpriteNode(imageNamed: "table\(randomizer.nextInt())");
             node.name = "obstacle";
-            node.size = CGSizeMake(32, 32);
+            node.size = CGSize(width: 32, height: 32);
             node.position = location;
             node.zPosition = 1;
             node.zRotation = CGFloat.pi_float * CGFloat(randomizer.nextInt()) / 2;
@@ -249,7 +249,7 @@ class GameScene: JDScene, tileMapDelegate, SKPhysicsContactDelegate, JDGameScene
             
         case .levelStart:
             let node = SKSpriteNode(imageNamed: "door");
-            node.size = CGSizeMake(32, 32);
+            node.size = CGSize(width: 32, height: 32);
             node.position = location;
             node.zPosition = 1;
             node.lightingBitMask = PhysicsCategories.LevelEntrance;
@@ -266,30 +266,30 @@ class GameScene: JDScene, tileMapDelegate, SKPhysicsContactDelegate, JDGameScene
             break;
         case .levelExit:
             let node = SKSpriteNode(imageNamed: "door");
-            node.size = CGSizeMake(32, 32);
+            node.size = CGSize(width: 32, height: 32);
             node.lightingBitMask = PhysicsCategories.LevelEnd;
             node.position = location;
             node.zPosition = 1;
-            node.physicsBody = SKPhysicsBody(edgeLoopFromRect: CGRect(origin: CGPointMake(-16, -16), size: CGSizeMake(32, 32)));
+            node.physicsBody = SKPhysicsBody(edgeLoopFrom: CGRect(origin: CGPoint(x: -16, y: -16), size: CGSize(width: 32, height: 32)));
             node.physicsBody?.categoryBitMask = PhysicsCategories.LevelEnd;
             worldLayer.addChild(node);
             break;
         }
     }
     
-    func addItemToLevel(item: SKSpriteNode) {
+    func addItemToLevel(_ item: SKSpriteNode) {
         worldLayer.addChild(item);
     }
     
-    func addEnemyToLevel(enemy:Enemy) {
+    func addEnemyToLevel(_ enemy:Enemy) {
         enemy.name = "Enemy";
         enemy.myScene = self;
         enemyLayer.addChild(enemy);
         enemies.append(enemy);
     }
     
-    func removeEnemyFromLevel(enemy:Enemy) {
-        enemies.removeAtIndex(enemies.indexOf(enemy)!);
+    func removeEnemyFromLevel(_ enemy:Enemy) {
+        enemies.remove(at: enemies.index(of: enemy)!);
         enemy.removeFromParent();
     }
 }

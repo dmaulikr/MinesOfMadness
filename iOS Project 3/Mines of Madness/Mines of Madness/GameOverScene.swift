@@ -12,37 +12,37 @@ class GameOverScene: JDScene {
     let goLabel = SKLabelNode(fontNamed: ProjectConstants.LabelFont);
     let restartLabel = SKLabelNode(fontNamed: ProjectConstants.LabelFont);
     let reachLabel = SKLabelNode(fontNamed: ProjectConstants.LabelFont);
-    override func didMoveToView(view: SKView) {
-        backgroundColor = SKColor.blackColor();
+    override func didMove(to view: SKView) {
+        backgroundColor = SKColor.black;
         
         goLabel.text = "Game Over";
-        goLabel.fontColor = SKColor.whiteColor();
+        goLabel.fontColor = SKColor.white;
         goLabel.fontSize = ProjectConstants.UILabelSize;
-        goLabel.position = CGPointMake(size.width / 2, size.height * 3 / 4);
-        goLabel.horizontalAlignmentMode = .Center;
+        goLabel.position = CGPoint(x: size.width / 2, y: size.height * 3 / 4);
+        goLabel.horizontalAlignmentMode = .center;
         addChild(goLabel);
         
         reachLabel.text = "You made it to level \(gameManager.prevLevel) but you could go no farther.";
-        reachLabel.fontColor = SKColor.whiteColor();
+        reachLabel.fontColor = SKColor.white;
         reachLabel.fontSize = ProjectConstants.UILabelSize;
-        reachLabel.position = CGPointMake(size.width / 2, size.height / 2);
-        reachLabel.horizontalAlignmentMode = .Center;
+        reachLabel.position = CGPoint(x: size.width / 2, y: size.height / 2);
+        reachLabel.horizontalAlignmentMode = .center;
         addChild(reachLabel);
         
         restartLabel.text = "Tap to return to the main menu";
-        restartLabel.fontColor = SKColor.whiteColor();
+        restartLabel.fontColor = SKColor.white;
         restartLabel.fontSize = ProjectConstants.UILabelSize;
-        restartLabel.position = CGPointMake(size.width / 2, size.height / 4);
-        restartLabel.horizontalAlignmentMode = .Center;
+        restartLabel.position = CGPoint(x: size.width / 2, y: size.height / 4);
+        restartLabel.horizontalAlignmentMode = .center;
         addChild(restartLabel);
 
     }
     
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         gameManager.loadLevel(MainMenu());
     }
     
-    override func pressesEnded(presses: Set<UIPress>, withEvent event: UIPressesEvent?) {
+    override func pressesEnded(_ presses: Set<UIPress>, with event: UIPressesEvent?) {
         gameManager.loadLevel(MainMenu());
     }
 }

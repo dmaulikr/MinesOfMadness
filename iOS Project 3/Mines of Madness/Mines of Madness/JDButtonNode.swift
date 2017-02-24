@@ -17,12 +17,12 @@ class JDButtonNode:SKLabelNode, JDButton {
     override init() {
         super.init();
         fontName = ProjectConstants.LabelFont;
-        userInteractionEnabled = true;
+        isUserInteractionEnabled = true;
     }
     
     func setBackgroundSize() {
-        bgRect = SKShapeNode(rectOfSize: frame.size + CGSizeMake(ProjectConstants.ButtonPaddingX * 2, ProjectConstants.ButtonPaddingY * 2));
-        bgRect?.fillColor = SKColor.redColor();
+        bgRect = SKShapeNode(rectOf: frame.size + CGSize(width: ProjectConstants.ButtonPaddingX * 2, height: ProjectConstants.ButtonPaddingY * 2));
+        bgRect?.fillColor = SKColor.red;
         bgRect?.zPosition = -1;
         addChild(bgRect!);
     }
@@ -31,7 +31,7 @@ class JDButtonNode:SKLabelNode, JDButton {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         #if os(iOS)
         onClick();
         #endif

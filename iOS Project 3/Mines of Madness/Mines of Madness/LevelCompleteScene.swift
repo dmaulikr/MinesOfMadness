@@ -12,22 +12,22 @@ class LevelCompleteScene: JDScene {
     let nextLevelLabel = SKLabelNode(fontNamed: ProjectConstants.LabelFont);
     let congratsLabel = SKLabelNode(fontNamed: ProjectConstants.LabelFont);
     
-    override func didMoveToView(view: SKView) {
-        backgroundColor = SKColor.blackColor();
+    override func didMove(to view: SKView) {
+        backgroundColor = SKColor.black;
         nextLevelLabel.text = "Tap to descend to the next level";
-        nextLevelLabel.fontColor = SKColor.whiteColor();
+        nextLevelLabel.fontColor = SKColor.white;
         nextLevelLabel.fontSize = 40;
-        nextLevelLabel.position = CGPointMake(size.width / 2, size.height / 4);
+        nextLevelLabel.position = CGPoint(x: size.width / 2, y: size.height / 4);
         addChild(nextLevelLabel);
         
         congratsLabel.text = "You have cleared Floor \(gameManager.prevLevel)";
-        congratsLabel.fontColor = SKColor.whiteColor();
+        congratsLabel.fontColor = SKColor.white;
         congratsLabel.fontSize = 40;
-        congratsLabel.position = CGPointMake(size.width / 2, size.height * 3 / 4);
+        congratsLabel.position = CGPoint(x: size.width / 2, y: size.height * 3 / 4);
         addChild(congratsLabel);
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         print("Touch");
         gameManager.loadLevel(GameScene());
     }

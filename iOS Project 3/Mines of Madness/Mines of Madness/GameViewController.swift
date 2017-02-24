@@ -10,10 +10,10 @@ import UIKit
 import SpriteKit
 
 protocol GameManager {
-    func loadLevel(scene:JDScene);
+    func loadLevel(_ scene:JDScene);
     var prevLevel:Int {get};
     var player:Player {get set};
-    func playSong(songNamed:String);
+    func playSong(_ songNamed:String);
     func stopSong();
 }
 class GameViewController: UIViewController, GameManager {
@@ -45,7 +45,7 @@ class GameViewController: UIViewController, GameManager {
         loadLevel(MainMenu());
     }
     
-    func loadLevel(scene: JDScene) {
+    func loadLevel(_ scene: JDScene) {
         
         if let gameScene = scene as? GameScene {
             lastLevel += 1;
@@ -56,23 +56,23 @@ class GameViewController: UIViewController, GameManager {
         self.curScene = scene;
         scene.gameManager = self;
         let skView = self.view as! SKView;
-        scene.scaleMode = .AspectFill;
-        scene.size = CGSizeMake(1024, 768);
+        scene.scaleMode = .aspectFill;
+        scene.size = CGSize(width: 1024, height: 768);
         skView.presentScene(scene);
     }
     
-    override func pressesBegan(presses: Set<UIPress>, withEvent event: UIPressesEvent?) {
-        curScene.pressesBegan(presses, withEvent: event);
+    override func pressesBegan(_ presses: Set<UIPress>, with event: UIPressesEvent?) {
+        curScene.pressesBegan(presses, with: event);
     }
     
-    override func pressesEnded(presses: Set<UIPress>, withEvent event: UIPressesEvent?) {
-        curScene.pressesEnded(presses, withEvent: event);
+    override func pressesEnded(_ presses: Set<UIPress>, with event: UIPressesEvent?) {
+        curScene.pressesEnded(presses, with: event);
     }
     
-    func playSong(songNamed: String) {
-        if let musicUrl = NSBundle.mainBundle().URLForResource(songNamed, withExtension: ".mp3") {
+    func playSong(_ songNamed: String) {
+        if let musicUrl = Bundle.main.url(forResource: songNamed, withExtension: ".mp3") {
             bgm?.removeFromParent();
-            bgm = SKAudioNode(URL: musicUrl);
+            bgm = SKAudioNode(url: musicUrl);
             (view as! SKView).scene?.addChild(bgm!);
         }
     }

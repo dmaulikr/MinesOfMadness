@@ -9,7 +9,7 @@
 import Foundation
 
 extension Int {
-    mutating func clamp(min min:Int, max:Int) {
+    mutating func clamp(min:Int, max:Int) {
         if (self < min) {
             self = min;
         } else if (self > max) {

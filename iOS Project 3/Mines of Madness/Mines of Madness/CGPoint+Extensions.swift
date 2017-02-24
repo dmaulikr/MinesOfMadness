@@ -15,71 +15,71 @@ extension CGPoint {
         }
     }
     
-    func distance(pt:CGPoint)->CGFloat {
+    func distance(_ pt:CGPoint)->CGFloat {
         let dif = self - pt;
         let dist = sqrt(dif.x * dif.x + dif.y * dif.y);
         return dist;
     }
     
-    static func pointFromAngle(deg:CGFloat)->CGPoint {
+    static func pointFromAngle(_ deg:CGFloat)->CGPoint {
         let ang = deg.degToRad;
-        return CGPointMake(cos(ang), sin(ang));
+        return CGPoint(x: cos(ang), y: sin(ang));
     }
 }
 
 func +(left:CGPoint, right:CGPoint)->CGPoint {
-    return CGPointMake(left.x + right.x, left.y + right.y);
+    return CGPoint(x: left.x + right.x, y: left.y + right.y);
 }
 
-func +=(inout left:CGPoint, right:CGPoint) {
+func +=(left:inout CGPoint, right:CGPoint) {
     left = left + right;
 }
 
 func -(left:CGPoint, right:CGPoint)->CGPoint {
-    return CGPointMake(left.x - right.x, left.y - right.y);
+    return CGPoint(x: left.x - right.x, y: left.y - right.y);
 }
 
-func -=(inout left:CGPoint, right:CGPoint) {
+func -=(left:inout CGPoint, right:CGPoint) {
     left = left - right;
 }
 
 func *(left:CGPoint, right: Int) -> CGPoint {
-    return CGPointMake(left.x * CGFloat(right), left.y * CGFloat(right));
+    return CGPoint(x: left.x * CGFloat(right), y: left.y * CGFloat(right));
 }
 
-func *=(inout left:CGPoint, right: Int) {
+func *=(left:inout CGPoint, right: Int) {
     left = left * right;
 }
 
 func *(left:Int, right: CGPoint) -> CGPoint {
-    return CGPointMake(CGFloat(left) * right.x, CGFloat(left) * right.y);
+    return CGPoint(x: CGFloat(left) * right.x, y: CGFloat(left) * right.y);
 }
 
 func /(left:CGPoint, right: Int) -> CGPoint {
-    return CGPointMake(left.x / CGFloat(right), left.y / CGFloat(right));
+    return CGPoint(x: left.x / CGFloat(right), y: left.y / CGFloat(right));
 }
 
-func /=(inout left:CGPoint, right: Int) {
+func /=(left:inout CGPoint, right: Int) {
     left = left / right;
 }
 
 func *(left:CGPoint, right: CGFloat) -> CGPoint {
-    return CGPointMake(left.x * right, left.y * right);
+    return CGPoint(x: left.x * right, y: left.y * right);
 }
 
-func *=(inout left:CGPoint, right: CGFloat) {
+func *=(left:inout CGPoint, right: CGFloat) {
     left = left * right;
 }
 
 func *(left:CGFloat, right: CGPoint) -> CGPoint {
-    return CGPointMake(left * right.x, left * right.y);
+    return CGPoint(x: left * right.x, y: left * right.y);
 }
 
 func /(left:CGPoint, right: CGFloat) -> CGPoint {
-    return CGPointMake(left.x / right, left.y / right);
+    return CGPoint(x: left.x / right, y: left.y / right);
 }
 
-func /=(inout left:CGPoint, right: CGFloat) {
+func /=(left:inout CGPoint, right: CGFloat) {
     left = left / right;
 }
 

@@ -9,57 +9,57 @@
 import SpriteKit;
 
 func +(left:CGSize, right:CGSize)->CGSize {
-    return CGSizeMake(left.width + right.width, left.height + right.height);
+    return CGSize(width: left.width + right.width, height: left.height + right.height);
 }
 
-func +=(inout left:CGSize, right:CGSize) {
+func +=(left:inout CGSize, right:CGSize) {
     left = left + right;
 }
 
 func -(left:CGSize, right:CGSize)->CGSize {
-    return CGSizeMake(left.width - right.width, left.height - right.height);
+    return CGSize(width: left.width - right.width, height: left.height - right.height);
 }
 
-func -=(inout left:CGSize, right:CGSize) {
+func -=(left:inout CGSize, right:CGSize) {
     left = left - right;
 }
 
 func *(left:CGSize, right: Int) -> CGSize {
-    return CGSizeMake(left.width * CGFloat(right), left.height * CGFloat(right));
+    return CGSize(width: left.width * CGFloat(right), height: left.height * CGFloat(right));
 }
 
-func *=(inout left:CGSize, right: Int) {
+func *=(left:inout CGSize, right: Int) {
     left = left * right;
 }
 
 func *(left:Int, right: CGSize) -> CGSize {
-    return CGSizeMake(CGFloat(left) * right.width, CGFloat(left) * right.height);
+    return CGSize(width: CGFloat(left) * right.width, height: CGFloat(left) * right.height);
 }
 
 func /(left:CGSize, right: Int) -> CGSize {
-    return CGSizeMake(left.width / CGFloat(right), left.height / CGFloat(right));
+    return CGSize(width: left.width / CGFloat(right), height: left.height / CGFloat(right));
 }
 
-func /=(inout left:CGSize, right: Int) {
+func /=(left:inout CGSize, right: Int) {
     left = left / right;
 }
 
 func *(left:CGSize, right: CGFloat) -> CGSize {
-    return CGSizeMake(left.width * right, left.height * right);
+    return CGSize(width: left.width * right, height: left.height * right);
 }
 
-func *=(inout left:CGSize, right: CGFloat) {
+func *=(left:inout CGSize, right: CGFloat) {
     left = left * right;
 }
 
 func *(left:CGFloat, right: CGSize) -> CGSize {
-    return CGSizeMake(left * right.width, left * right.height);
+    return CGSize(width: left * right.width, height: left * right.height);
 }
 
 func /(left:CGSize, right: CGFloat) -> CGSize {
-    return CGSizeMake(left.width / right, left.height / right);
+    return CGSize(width: left.width / right, height: left.height / right);
 }
 
-func /=(inout left:CGSize, right: CGFloat) {
+func /=(left:inout CGSize, right: CGFloat) {
     left = left / right;
 }

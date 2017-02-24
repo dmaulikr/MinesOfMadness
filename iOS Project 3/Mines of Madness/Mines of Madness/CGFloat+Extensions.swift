@@ -22,7 +22,7 @@ extension CGFloat {
         }
     }
     
-    func between(min:CGFloat, max:CGFloat) -> Bool {
+    func between(_ min:CGFloat, max:CGFloat) -> Bool {
         return self >= min && self <= max;
     }
 }

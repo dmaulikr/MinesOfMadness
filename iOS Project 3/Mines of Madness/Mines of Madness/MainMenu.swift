@@ -11,22 +11,22 @@ import SpriteKit
 class MainMenu: JDScene {
     let startButton = JDButtonNode();
     let htpButton = JDButtonNode();
-    override func didMoveToView(view: SKView) {
-        backgroundColor = SKColor.blackColor();
+    override func didMove(to view: SKView) {
+        backgroundColor = SKColor.black;
         let titleLabel = SKLabelNode(fontNamed: ProjectConstants.LabelFont);
         titleLabel.text = "Mines of Madness";
-        titleLabel.fontColor = SKColor.whiteColor();
+        titleLabel.fontColor = SKColor.white;
         titleLabel.fontSize = 80;
-        titleLabel.position = CGPointMake(size.width / 2, size.height * 3 / 4);
+        titleLabel.position = CGPoint(x: size.width / 2, y: size.height * 3 / 4);
         addChild(titleLabel);
         
         
         startButton.text = "Begin Your Descent";
-        startButton.fontColor = UIColor.whiteColor();
+        startButton.fontColor = UIColor.white;
         startButton.fontSize = ProjectConstants.UILabelSize;
-        startButton.horizontalAlignmentMode = .Center;
-        startButton.verticalAlignmentMode = .Center;
-        startButton.position = CGPointMake(size.width / 2, size.height / 2);
+        startButton.horizontalAlignmentMode = .center;
+        startButton.verticalAlignmentMode = .center;
+        startButton.position = CGPoint(x: size.width / 2, y: size.height / 2);
         startButton.setBackgroundSize();
         startButton.onClick = {
             self.gameManager.loadLevel(GameScene());
@@ -39,11 +39,11 @@ class MainMenu: JDScene {
         #endif
         
         htpButton.text = "How To Play";
-        htpButton.fontColor = UIColor.whiteColor();
+        htpButton.fontColor = UIColor.white;
         htpButton.fontSize = ProjectConstants.UILabelSize;
-        htpButton.horizontalAlignmentMode = .Center;
-        htpButton.verticalAlignmentMode = .Center;
-        htpButton.position = CGPointMake(size.width / 2, size.height / 4);
+        htpButton.horizontalAlignmentMode = .center;
+        htpButton.verticalAlignmentMode = .center;
+        htpButton.position = CGPoint(x: size.width / 2, y: size.height / 4);
         htpButton.setBackgroundSize();
         htpButton.onClick = {
             self.gameManager.loadLevel(HowToPlayScene());
@@ -53,7 +53,7 @@ class MainMenu: JDScene {
         gameManager.playSong("Thru_The_Fog");
     }
     
-    override func willMoveFromView(view: SKView) {
+    override func willMove(from view: SKView) {
         gameManager.stopSong();
     }
 }

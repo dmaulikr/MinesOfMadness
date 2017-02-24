@@ -14,9 +14,9 @@ class JDArrowButtonNode: SKSpriteNode, JDButton {
     init(rot:CGFloat, scene:JDGameScene) {
         jScene = scene;
         let tex = SKTexture.init(imageNamed: "arrow");
-        super.init(texture: tex, color: SKColor.whiteColor(), size: tex.size());
+        super.init(texture: tex, color: SKColor.white, size: tex.size());
         zRotation = rot.degToRad;
-        userInteractionEnabled = true;
+        isUserInteractionEnabled = true;
         onClick = {
             self.jScene.movePlayer(CGPoint.pointFromAngle(rot + 90) * ProjectConstants.TileWidth);
             self.dehighlight();
@@ -29,32 +29,32 @@ class JDArrowButtonNode: SKSpriteNode, JDButton {
     }
     
     func highlight() {
-        self.color = SKColor.redColor();
+        self.color = SKColor.red;
     }
     
     func dehighlight() {
-        self.color = SKColor.whiteColor();
+        self.color = SKColor.white;
     }
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         #if os(iOS)
             highlight();
         #endif
     }
     
-    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         #if os(iOS)
             guard let touch = touches.first else {
                 return;
             }
             
-            let pos = touch.locationInNode(self);
+            let pos = touch.location(in: self);
             if (!(pos.x.between(0, max: size.width) && pos.y.between(0, max: size.height))) {
                 dehighlight();
             }
         #endif
     }
     
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         #if os(iOS)
             onClick();
         #endif

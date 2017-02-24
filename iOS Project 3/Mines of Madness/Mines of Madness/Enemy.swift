@@ -20,10 +20,10 @@ class Enemy: SKSpriteNode {
     }
     init() {
         let tex = SKTexture(imageNamed: "enemy");
-        super.init(texture: tex, color: SKColor.clearColor(), size: tex.size());
-        physicsBody = SKPhysicsBody(rectangleOfSize: tex.size());
+        super.init(texture: tex, color: SKColor.clear, size: tex.size());
+        physicsBody = SKPhysicsBody(rectangleOf: tex.size());
         physicsBody?.affectedByGravity = false;
-        physicsBody?.dynamic = false;
+        physicsBody?.isDynamic = false;
         physicsBody?.categoryBitMask = PhysicsCategories.Enemy;
         lightingBitMask = PhysicsCategories.Enemy;
         
@@ -33,7 +33,7 @@ class Enemy: SKSpriteNode {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func move(lm:levelMaker) {
+    func move(_ lm:levelMaker) {
         let gen = GKShuffledDistribution(forDieWithSideCount: 4);
         var testPos = position;
         repeat {
@@ -41,16 +41,16 @@ class Enemy: SKSpriteNode {
             
             switch dir {
             case 1:
-                testPos = position + CGPointMake(0, 32);
+                testPos = position + CGPoint(x: 0, y: 32);
                 break;
             case 2:
-                testPos = position + CGPointMake(0, -32);
+                testPos = position + CGPoint(x: 0, y: -32);
                 break;
             case 3:
-                testPos = position + CGPointMake(32, 0);
+                testPos = position + CGPoint(x: 32, y: 0);
                 break;
             case 4:
-                testPos = position + CGPointMake(-32, 0);
+                testPos = position + CGPoint(x: -32, y: 0);
                 break;
             default:
                 break;

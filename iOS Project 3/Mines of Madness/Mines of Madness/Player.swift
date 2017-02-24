@@ -51,17 +51,17 @@ class Player: SKSpriteNode {
     }
     init() {
         let tex = SKTexture(imageNamed: "player");
-        super.init(texture: tex, color: SKColor.clearColor(), size:tex.size());
-        physicsBody = SKPhysicsBody(rectangleOfSize: tex.size());
+        super.init(texture: tex, color: SKColor.clear, size:tex.size());
+        physicsBody = SKPhysicsBody(rectangleOf: tex.size());
         physicsBody?.affectedByGravity = false;
         physicsBody?.categoryBitMask = PhysicsCategories.Player;
         physicsBody?.collisionBitMask = PhysicsCategories.Wall;
         physicsBody?.contactTestBitMask = PhysicsCategories.LevelEnd | PhysicsCategories.OilCan | PhysicsCategories.Enemy | PhysicsCategories.HealthKit | PhysicsCategories.SanityKit;
         
-        myLight.lightColor = SKColor.whiteColor();
+        myLight.lightColor = SKColor.white;
         myLight.categoryBitMask = PhysicsCategories.All;
         myLight.falloff = 1;
-        myLight.enabled = true;
+        myLight.isEnabled = true;
         addChild(myLight);
     }
     
